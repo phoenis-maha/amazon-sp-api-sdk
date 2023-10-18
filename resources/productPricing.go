@@ -5,8 +5,14 @@ import (
 	"time"
 )
 
-func GetPricing(params *SellingPartnerParams) error {
+func GetFeaturedOfferExpectedPriceBatch(params *SellingPartnerParams) error {
+	params.Method = "GET"
+	params.APIPath = "/batches/products/pricing/2022-05-01/offer/featuredOfferExpectedPrice"
+	params.RestoreRate = 1 * time.Second
+	return nil
+}
 
+func GetPricing(params *SellingPartnerParams) error {
 	params.Method = "GET"
 	params.APIPath = "/products/pricing/v0/price"
 	params.RestoreRate = 1 * time.Second
@@ -14,7 +20,6 @@ func GetPricing(params *SellingPartnerParams) error {
 }
 
 func GetCompetitivePricing(params *SellingPartnerParams) error {
-
 	params.Method = "GET"
 	params.APIPath = "/products/pricing/v0/competitivePrice"
 	params.RestoreRate = 1 * time.Second

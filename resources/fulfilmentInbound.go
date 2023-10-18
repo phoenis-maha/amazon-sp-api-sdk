@@ -22,7 +22,7 @@ func CreateInboundShipmentPlan(params *SellingPartnerParams) error {
 }
 
 func UpdateInboundShipment(params *SellingPartnerParams) error {
-	if _,present := params.PathParams["shipmentId"]; !present {
+	if _, present := params.PathParams["shipmentId"]; !present {
 		return fmt.Errorf("path param 'shipmentId' not present")
 	}
 
@@ -34,7 +34,7 @@ func UpdateInboundShipment(params *SellingPartnerParams) error {
 }
 
 func CreateInboundShipment(params *SellingPartnerParams) error {
-	if _,present := params.PathParams["shipmentId"]; !present {
+	if _, present := params.PathParams["shipmentId"]; !present {
 		return fmt.Errorf("path param 'shipmentId' not present")
 	}
 
@@ -46,7 +46,7 @@ func CreateInboundShipment(params *SellingPartnerParams) error {
 }
 
 func GetPreorderInfo(params *SellingPartnerParams) error {
-	if _,present := params.PathParams["shipmentId"]; !present {
+	if _, present := params.PathParams["shipmentId"]; !present {
 		return fmt.Errorf("path param 'shipmentId' not present")
 	}
 
@@ -58,7 +58,7 @@ func GetPreorderInfo(params *SellingPartnerParams) error {
 }
 
 func ConfirmPreorder(params *SellingPartnerParams) error {
-	if _,present := params.PathParams["shipmentId"]; !present {
+	if _, present := params.PathParams["shipmentId"]; !present {
 		return fmt.Errorf("path param 'shipmentId' not present")
 	}
 
@@ -78,7 +78,7 @@ func GetPrepInstructions(params *SellingPartnerParams) error {
 }
 
 func GetTransportDetails(params *SellingPartnerParams) error {
-	if _,present := params.PathParams["shipmentId"]; !present {
+	if _, present := params.PathParams["shipmentId"]; !present {
 		return fmt.Errorf("path param 'shipmentId' not present")
 	}
 
@@ -90,7 +90,7 @@ func GetTransportDetails(params *SellingPartnerParams) error {
 }
 
 func PutTransportDetails(params *SellingPartnerParams) error {
-	if _,present := params.PathParams["shipmentId"]; !present {
+	if _, present := params.PathParams["shipmentId"]; !present {
 		return fmt.Errorf("path param 'shipmentId' not present")
 	}
 
@@ -102,7 +102,7 @@ func PutTransportDetails(params *SellingPartnerParams) error {
 }
 
 func VoidTransport(params *SellingPartnerParams) error {
-	if _,present := params.PathParams["shipmentId"]; !present {
+	if _, present := params.PathParams["shipmentId"]; !present {
 		return fmt.Errorf("path param 'shipmentId' not present")
 	}
 
@@ -114,7 +114,7 @@ func VoidTransport(params *SellingPartnerParams) error {
 }
 
 func EstimateTransport(params *SellingPartnerParams) error {
-	if _,present := params.PathParams["shipmentId"]; !present {
+	if _, present := params.PathParams["shipmentId"]; !present {
 		return fmt.Errorf("path param 'shipmentId' not present")
 	}
 
@@ -126,7 +126,7 @@ func EstimateTransport(params *SellingPartnerParams) error {
 }
 
 func ConfirmTransport(params *SellingPartnerParams) error {
-	if _,present := params.PathParams["shipmentId"]; !present {
+	if _, present := params.PathParams["shipmentId"]; !present {
 		return fmt.Errorf("path param 'shipmentId' not present")
 	}
 
@@ -138,7 +138,7 @@ func ConfirmTransport(params *SellingPartnerParams) error {
 }
 
 func GetLabels(params *SellingPartnerParams) error {
-	if _,present := params.PathParams["shipmentId"]; !present {
+	if _, present := params.PathParams["shipmentId"]; !present {
 		return fmt.Errorf("path param 'shipmentId' not present")
 	}
 
@@ -150,7 +150,7 @@ func GetLabels(params *SellingPartnerParams) error {
 }
 
 func GetBillOfLading(params *SellingPartnerParams) error {
-	if _,present := params.PathParams["shipmentId"]; !present {
+	if _, present := params.PathParams["shipmentId"]; !present {
 		return fmt.Errorf("path param 'shipmentId' not present")
 	}
 
@@ -170,7 +170,7 @@ func GetShipments(params *SellingPartnerParams) error {
 }
 
 func GetShipmentItemsByShipmentId(params *SellingPartnerParams) error {
-	if _,present := params.PathParams["shipmentId"]; !present {
+	if _, present := params.PathParams["shipmentId"]; !present {
 		return fmt.Errorf("path param 'shipmentId' not present")
 	}
 

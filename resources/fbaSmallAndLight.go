@@ -6,7 +6,7 @@ import (
 )
 
 func GetSmallAndLightEnrollmentBySellerSKU(params *SellingPartnerParams) error {
-	if _,present := params.PathParams["sellerSKU"]; !present {
+	if _, present := params.PathParams["sellerSKU"]; !present {
 		return fmt.Errorf("path param 'sellerSKU' not present")
 	}
 
@@ -18,7 +18,7 @@ func GetSmallAndLightEnrollmentBySellerSKU(params *SellingPartnerParams) error {
 }
 
 func PutSmallAndLightEnrollmentBySellerSKU(params *SellingPartnerParams) error {
-	if _,present := params.PathParams["sellerSKU"]; !present {
+	if _, present := params.PathParams["sellerSKU"]; !present {
 		return fmt.Errorf("path param 'sellerSKU' not present")
 	}
 
@@ -30,7 +30,7 @@ func PutSmallAndLightEnrollmentBySellerSKU(params *SellingPartnerParams) error {
 }
 
 func DeleteSmallAndLightEnrollmentBySellerSKU(params *SellingPartnerParams) error {
-	if _,present := params.PathParams["sellerSKU"]; !present {
+	if _, present := params.PathParams["sellerSKU"]; !present {
 		return fmt.Errorf("path param 'sellerSKU' not present")
 	}
 
@@ -42,7 +42,7 @@ func DeleteSmallAndLightEnrollmentBySellerSKU(params *SellingPartnerParams) erro
 }
 
 func GetSmallAndLightEligibilityBySellerSKU(params *SellingPartnerParams) error {
-	if _,present := params.PathParams["sellerSKU"]; !present {
+	if _, present := params.PathParams["sellerSKU"]; !present {
 		return fmt.Errorf("path param 'sellerSKU' not present")
 	}
 

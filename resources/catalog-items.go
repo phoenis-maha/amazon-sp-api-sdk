@@ -23,10 +23,3 @@ func GetCatalogItem(params *SellingPartnerParams) error {
 
 	return nil
 }
-
-func ListCatalogCategories(params *SellingPartnerParams) error {
-	params.Method = "GET"
-	params.APIPath = "/catalog/v0/categories"
-	params.RestoreRate = 1 * time.Second
-	return nil
-}
