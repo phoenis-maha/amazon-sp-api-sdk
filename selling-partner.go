@@ -7,6 +7,7 @@ import (
 	"fmt"
 	xj "github.com/basgys/goxml2json"
 	"github.com/phoenis-maha/amazon-sp-api-sdk/resources"
+	"io"
 	"io/ioutil"
 	"net/http"
 	"net/http/httputil"
@@ -202,7 +203,7 @@ func (o *SellingPartner) RefreshRoleCredentials() error {
 		}
 	}
 
-	respBodyBytes, _ := ioutil.ReadAll(response.Body)
+	respBodyBytes, _ := io.ReadAll(response.Body)
 	respBody, err := xj.Convert(bytes.NewReader(respBodyBytes))
 	if err != nil {
 		return fmt.Errorf("failed to parse xml: %s", response.Body)
