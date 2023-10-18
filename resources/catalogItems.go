@@ -6,6 +6,9 @@ import (
 )
 
 func SearchCatalogItems(params *SellingPartnerParams) error {
+	if present := params.Query.Has("marketplaceIds"); !present {
+		return fmt.Errorf("query param 'marketplaceIds' not present")
+	}
 	params.Method = "GET"
 	params.APIPath = "/catalog/2022-04-01/items"
 	params.RestoreRate = 1 * time.Second
