@@ -37,6 +37,7 @@ type OptionsConfig struct {
 	AutoRequestTokens    bool
 	AutoRequestThrottled bool
 	Debug                bool
+	UseSandbox           bool
 }
 
 type CredentialsConfig struct {
@@ -45,14 +46,14 @@ type CredentialsConfig struct {
 }
 
 type AppClientConfig struct {
-	Id string
+	Id     string
 	Secret string
 }
 
 type AWSUserConfig struct {
-	Id string
+	Id     string
 	Secret string
-	Role string
+	Role   string
 }
 
 func NewCredentialsConfig() (*CredentialsConfig, error) {
@@ -120,6 +121,7 @@ func NewOptionsConfig() *OptionsConfig {
 		AutoRequestThrottled: true,
 		AutoRequestTokens:    true,
 		Debug:                false,
+		UseSandbox:           false,
 	}
 }
 

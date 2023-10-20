@@ -27,7 +27,12 @@ type ISODate struct {
 	Full  string
 }
 
-func NewSigner(region string) *Signer {
+func NewSigner(region string, useSandbox bool) *Signer {
+	baseURL := "sellingpartnerapi-%s.amazon.com"
+	if useSandbox {
+		baseURL = "sandbox.sellingpartnerapi-%s.amazon.com"
+	}
+
 	return &Signer{
 		Region: region,
 		AWSRegions: map[string]string{
@@ -35,7 +40,7 @@ func NewSigner(region string) *Signer {
 			"na": "us-east-1",
 			"fe": "us-west-2",
 		},
-		APIEndpoint: fmt.Sprintf("sellingpartnerapi-%s.amazon.com", region),
+		APIEndpoint: fmt.Sprintf(baseURL, region),
 	}
 }
 
