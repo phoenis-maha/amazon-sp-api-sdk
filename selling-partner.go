@@ -173,7 +173,7 @@ type APIResponseError struct {
 }
 
 func (o *SellingPartner) RefreshRoleCredentials() error {
-	signedRequest, err := NewSigner(o.Config.Region, o.Config.Options.UseSandbox).SignRoleCredentialsRequest(*o.Credentials.AWSUser)
+	signedRequest, err := NewSigner(o.Config.Region).SignRoleCredentialsRequest(*o.Credentials.AWSUser)
 
 	if err != nil {
 		return err
@@ -274,7 +274,7 @@ func (o *SellingPartner) CallAPI(params resources.SellingPartnerParams) (*string
 		return nil, fmt.Errorf("cannot apply operation params. Error: " + err.Error())
 	}
 
-	signer := NewSigner(o.Config.Region, o.Config.Options.UseSandbox)
+	signer := NewSigner(o.Config.Region)
 
 	signedRequest, err := signer.SignAPIRequest(
 		o.AccessToken, *o.Config.RoleCredentials, params)

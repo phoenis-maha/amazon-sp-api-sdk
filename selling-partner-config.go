@@ -37,7 +37,6 @@ type OptionsConfig struct {
 	AutoRequestTokens    bool
 	AutoRequestThrottled bool
 	Debug                bool
-	UseSandbox           bool
 }
 
 type CredentialsConfig struct {
@@ -121,7 +120,6 @@ func NewOptionsConfig() *OptionsConfig {
 		AutoRequestThrottled: true,
 		AutoRequestTokens:    true,
 		Debug:                false,
-		UseSandbox:           false,
 	}
 }
 
