@@ -5,6 +5,9 @@ import "github.com/phoenis-maha/amazon-sp-api-sdk/resources"
 type Operations map[string]func(params *resources.SellingPartnerParams) error
 
 var AvailableOperations = Operations{
+	"searchContentDocuments":                           resources.SearchContentDocuments,
+	"createContentDocument":                            resources.CreateContentDocument,
+	"getContentDocument":                               resources.GetContentDocument,
 	"getAuthorizationCode":                             resources.GetAuthorizationCode,
 	"searchCatalogItems":                               resources.SearchCatalogItems,
 	"getCatalogItem":                                   resources.GetCatalogItem,
