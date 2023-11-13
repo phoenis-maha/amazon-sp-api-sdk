@@ -8,7 +8,6 @@ import (
 	xj "github.com/basgys/goxml2json"
 	"github.com/phoenis-maha/amazon-sp-api-sdk/resources"
 	"io"
-	"io/ioutil"
 	"net/http"
 	"net/http/httputil"
 	"regexp"
@@ -69,7 +68,7 @@ func (o *SellingPartner) RefreshToken() error {
 
 	defer resp.Body.Close()
 
-	respBodyBytes, _ := ioutil.ReadAll(resp.Body)
+	respBodyBytes, _ := io.ReadAll(resp.Body)
 	theResp := &AccessTokenResponse{}
 
 	if err = json.Unmarshal(respBodyBytes, theResp); err != nil {
@@ -312,7 +311,7 @@ func (o *SellingPartner) CallAPI(params resources.SellingPartnerParams) (*string
 		return &successRes, nil
 	}
 
-	apiResponseBody, _ := ioutil.ReadAll(response.Body)
+	apiResponseBody, _ := io.ReadAll(response.Body)
 
 	apiResponseBody = bytes.ReplaceAll(apiResponseBody, []byte(": IOSS"), []byte(`: "IOSS"`))
 
