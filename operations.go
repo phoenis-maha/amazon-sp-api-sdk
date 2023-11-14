@@ -110,6 +110,7 @@ var AvailableOperations = Operations{
 	"getOrderItemsBuyerInfo":                           resources.GetOrderItemsBuyerInfo,
 	"getMyFeesEstimateForSKU":                          resources.GetMyFeesEstimateForSKU,
 	"getMyFeesEstimateForASIN":                         resources.GetMyFeesEstimateForASIN,
+	"getMyFeesEstimates":                               resources.GetMyFeesEstimates,
 	"getFeaturedOfferExpectedPriceBatch":               resources.GetFeaturedOfferExpectedPriceBatch,
 	"getPricing":                                       resources.GetPricing,
 	"getCompetitivePricing":                            resources.GetCompetitivePricing,

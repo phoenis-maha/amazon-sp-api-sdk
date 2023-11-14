@@ -26,3 +26,10 @@ func GetMyFeesEstimateForASIN(params *SellingPartnerParams) error {
 	params.RestoreRate = 1 * time.Second
 	return nil
 }
+
+func GetMyFeesEstimates(params *SellingPartnerParams) error {
+	params.Method = "POST"
+	params.APIPath = "/products/fees/v0/feesEstimate"
+	params.RestoreRate = 1 * time.Second
+	return nil
+}
